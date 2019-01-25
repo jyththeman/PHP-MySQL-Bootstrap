@@ -45,21 +45,58 @@ if (isset($_POST['submit'])) {
 
   <h2>Add a user</h2>
 
-  <form method="post">
-    <input name="csrf" type="hidden" value="<?php echo escape($_SESSION['csrf']); ?>">
-    <label for="firstname">First Name</label>
-    <input type="text" name="firstname" id="firstname">
-    <label for="lastname">Last Name</label>
-    <input type="text" name="lastname" id="lastname">
-    <label for="email">Email Address</label>
-    <input type="text" name="email" id="email">
-    <label for="age">Age</label>
-    <input type="text" name="age" id="age">
-    <label for="location">Location</label>
-    <input type="text" name="location" id="location">
-    <input type="submit" name="submit" value="Submit">
+<div class="container">
+  <h2>User Information</h2>
+  <form class="form-horizontal" method="post">
+    <div class="form-group">
+      <input name="csrf" type="hidden" value="<?php echo escape($_SESSION['csrf']); ?>">
+      <label class="control-label col-sm-2" for="firstname">First Name: </label>
+        <div class="col-sm-5">
+      <input type="text" class="form-control" name="firstname" id="firstname">
+            </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="lastname">Last Name: </label>
+        <div class="col-sm-5">
+      <input type="text" class="form-control" name="lastname" id="lastname">
+            </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Email Address: </label>
+        <div class="col-sm-5">
+      <input type="text" class="form-control" name="email" id="email">
+            </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="age">Age: </label>
+        <div class="col-sm-5">
+      <input type="text" class="form-control" name="age" id="age">
+            </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="location">Location: </label>
+        <div class="col-sm-5">
+      <input type="text" class="form-control" name="location" id="location">
+            </div>
+    </div>
+   <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-2">
+       <button type="submit" class="form-control" name="submit" value="Submit">Submit</button>
+       </div>
+       
+      </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-2">
+       <a href="index.php">Back to home</a>
+       </div>
+       
+      </div>
+      
+      
   </form>
+    
+</div>
 
-  <a href="index.php">Back to home</a>
+  
 
 <?php require "templates/footer.php"; ?>
